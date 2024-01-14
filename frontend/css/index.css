@@ -1,0 +1,16 @@
+body {
+    padding-top: 56px;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        padding-top: 72px;
+    }
+
+}
+
+.property-table th,
+.property-table td {
+    text-align: center;
+}
