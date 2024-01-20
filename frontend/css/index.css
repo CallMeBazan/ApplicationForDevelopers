@@ -8,9 +8,16 @@ body {
         padding-top: 72px;
     }
 
+    .navbar-brand {
+        margin-left: 10%;
+    }
 }
 
 .property-table th,
 .property-table td {
     text-align: center;
+}
+
+.collapse {
+    margin-right: 10%;
 }
