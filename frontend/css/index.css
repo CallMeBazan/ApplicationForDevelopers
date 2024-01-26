@@ -1,34 +1,21 @@
+@import 'navbar.css';
+
+.title {
+    font-size: 400%;
+    font-weight: bold;
+    margin-top: 10%;
+    float: left;
+}
+
+.lead {
+    float: left;
+}
+
 @media (min-width: 768px) {
 
-    body {
-        padding-top: 72px;
+    #footer {
+        float: left;
+        text-align: center;
     }
 
-    .navbar-brand {
-        margin-left: 20%;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .navbar-brand {
-        margin-left: 0%;
-    }
-
-}
-
-body {
-    padding-top: 56px;
-
-}
-
-
-
-.property-table th,
-.property-table td {
-    text-align: center;
-}
-
-.collapse {
-    margin-right: 20%;
 }

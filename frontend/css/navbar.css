@@ -1,0 +1,34 @@
+@media (min-width: 768px) {
+
+    body {
+        padding-top: 72px;
+    }
+
+    .navbar-brand {
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar-brand {
+        margin-left: 0%;
+    }
+
+}
+
+body {
+    padding-top: 56px;
+
+}
+
+
+
+.property-table th,
+.property-table td {
+    text-align: center;
+}
+
+.collapse {
+    margin-right: 20%;
+}
