@@ -4,18 +4,29 @@
     font-size: 400%;
     font-weight: bold;
     margin-top: 10%;
-    float: left;
-}
-
-.lead {
-    float: left;
-}
-
-@media (min-width: 768px) {
-
-    #footer {
-        float: left;
-        text-align: center;
-    }
 
 }
+
+#footer {
+
+    text-align: center;
+
+
+}
+
+body {
+
+    background-color: #1e1e1f;
+}
+
+.container {
+    background-color: #1e1e1f;
+}
+
+.text-center {
+    color: white;
+}
+
+
+/* Opptions for screen with minimal-width 768px */
+@media (min-width: 768px) {}

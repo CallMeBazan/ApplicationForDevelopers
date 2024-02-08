@@ -6,23 +6,48 @@
 
     .navbar-brand {
         margin-left: 20%;
+        font-size: 35px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+
     }
+
+    .navbar {
+        height: 70px;
+    }
+
+    #logo {
+        width: 40px;
+        height: 40px;
+    }
+
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .navbar-brand {
         margin-left: 0%;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
     }
 
 }
 
 body {
     padding-top: 56px;
+    font-family: "Montserrat", sans-serif;
+
 
 }
 
 
+
+#footer {
+    background-color: #242424;
+    color: white;
+    height: 80px;
+}
 
 .property-table th,
 .property-table td {
