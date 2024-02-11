@@ -1,59 +1,123 @@
-@media (min-width: 768px) {
-
-    body {
-        padding-top: 72px;
-    }
-
-    .navbar-brand {
-        margin-left: 20%;
-        font-size: 35px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-
-    }
-
-    .navbar {
-        height: 70px;
-    }
-
-    #logo {
-        width: 40px;
-        height: 40px;
-    }
-
-
+/* Standardowe style dla większych ekranów */
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-@media (max-width: 767px) {
+img {
+    width: 100%;
+    display: block;
+}
 
-    .navbar-brand {
-        margin-left: 0%;
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
+.nav-logo {
+    max-width: 100px;
+    /* Zmniejsz max-width dla mniejszych ekranów */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 70%;
+}
+
+/* Dodatkowe style dla mniejszych ekranów */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+        /* Mniejszy padding dla mniejszych ekranów */
+        flex-direction: column;
+        /* Zmiana układu dla mniejszych ekranów */
+        align-items: flex-start;
     }
 
-}
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        display: none;
+        /* Ukryj nawigację dla mniejszych ekranów */
+    }
 
-body {
-    padding-top: 56px;
-    font-family: "Montserrat", sans-serif;
+    .link a {
+        padding: 0.5rem 0;
+        /* Mniejszy padding dla mniejszych ekranów */
+    }
 
+    .toggle-btn {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        display: block;
+        margin-left: auto;
+    }
 
-}
+    .toggle-icon {
+        width: 30px;
+        height: 30px;
+        background-color: #1d4ed8;
+        position: relative;
+        border-radius: 3px;
+        margin-right: 2rem;
+        margin-top: -55px;
+    }
 
+    .toggle-icon::before,
+    .toggle-icon::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 3px;
+        transition: transform 0.3s ease;
+    }
 
+    .toggle-icon::before {
+        transform: translateY(-8px);
+    }
 
-#footer {
-    background-color: #242424;
-    color: white;
-    height: 80px;
-}
+    .toggle-icon::after {
+        transform: translateY(8px);
+    }
 
-.property-table th,
-.property-table td {
-    text-align: center;
-}
+    .nav-logo {
+        margin-top: 1rem;
+        width: 60px;
+        /* Zmniejsz szerokość dla mniejszych ekranów */
+        height: 60px;
+        /* Zmniejsz wysokość dla mniejszych ekranów */
+    }
 
-.collapse {
-    margin-right: 20%;
+    /* Pokaż nawigację tylko gdy toggle jest aktywowany */
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

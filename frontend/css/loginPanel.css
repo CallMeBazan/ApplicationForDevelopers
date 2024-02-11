@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+
+/* Dodaj marginesy tylko dla urządzeń o szerokości do 767px */
+@media (max-width: 767px) {
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +20,7 @@
 
 body {
     background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background: linear-gradient(to right, #3b3b42, #18181B);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +58,7 @@ body {
 }
 
 .container button {
-    background-color: #512da8;
+    background-color: #1e1e1f;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -165,9 +176,9 @@ body {
 }
 
 .toggle {
-    background-color: #512da8;
+    background-color: #1e1e1f;
     height: 100%;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
+    background: linear-gradient(to right, #3b3b42, #18181B);
     color: #fff;
     position: relative;
     left: -100%;
