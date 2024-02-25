@@ -112,6 +112,63 @@ section .header {
     font-weight: 600;
 }
 
+section .header {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+    font: size 2.25rem;
+    font-weight: 600;
+}
+
+.features {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.features .card {
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover {
+    background-color: #323232;
+    border-color: #ffffff;
+}
+
+.features .card span {
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.features .card h4 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.features .card p {
+    color: #cccccc;
+    margin-bottom: 1rem;
+}
+
+
+.features .card a {
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+
 /* Opptions for screen with minimal-width 768px */
 @media (max-width: 768px) {
     .container {
@@ -145,5 +202,13 @@ section .header {
     section .header {
         font-size: 1.5rem;
         /* Mniejsza czcionka dla mniejszych ekranów */
+    }
+
+
+    .features {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
     }
 }
