@@ -47,13 +47,13 @@ img {
     width: 70%;
 }
 
-/* Dodatkowe style dla mniejszych ekranów */
+
 @media (max-width: 768px) {
     nav {
         padding: 1rem;
-        /* Mniejszy padding dla mniejszych ekranów */
+
         flex-direction: column;
-        /* Zmiana układu dla mniejszych ekranów */
+
         align-items: flex-start;
     }
 
@@ -61,12 +61,12 @@ img {
         flex-direction: column;
         gap: 1rem;
         display: none;
-        /* Ukryj nawigację dla mniejszych ekranów */
+
     }
 
     .link a {
         padding: 0.5rem 0;
-        /* Mniejszy padding dla mniejszych ekranów */
+
     }
 
     .toggle-btn {
@@ -109,12 +109,12 @@ img {
     .nav-logo {
         margin-top: 1rem;
         width: 60px;
-        /* Zmniejsz szerokość dla mniejszych ekranów */
+
         height: 60px;
-        /* Zmniejsz wysokość dla mniejszych ekranów */
+
     }
 
-    /* Pokaż nawigację tylko gdy toggle jest aktywowany */
+
     .nav-links.active {
         display: flex;
         flex-direction: column;
