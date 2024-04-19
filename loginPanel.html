@@ -36,7 +36,7 @@
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form action="backend/phpFiles/authenticate.php" method="post">
                 <h1>Zaloguj Się</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -45,8 +45,8 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="text" name="username" placeholder="Login">
+                <input type="password" name="password" placeholder="Password">
                 <a href="#">Forget Your Password?</a>
                 <button>Sign In</button>
             </form>
@@ -67,6 +67,10 @@
         </div>
     </div>
 
+    <!--PHP-->
+
+
+    <!--JS-->
     <script src="frontend/js/panel.js"></script>
 
 </body>
