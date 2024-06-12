@@ -98,3 +98,11 @@ body {
 .register-link p a:hover {
     text-decoration: underline;
 }
+
+@media (width < 600px) {
+
+    .container {
+        border: none;
+    }
+
+}
