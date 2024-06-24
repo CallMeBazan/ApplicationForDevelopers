@@ -48,6 +48,10 @@ body {
     border-color: #ffffff;
 }
 
+.container .box-logOut:hover {
+    background-color: rgb(255, 126, 126);
+}
+
 .box i {
     font-size: 50px;
     position: absolute;

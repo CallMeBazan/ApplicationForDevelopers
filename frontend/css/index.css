@@ -112,14 +112,6 @@ section .header {
     font-weight: 600;
 }
 
-section .header {
-    margin-bottom: 1rem;
-    color: #ffffff;
-    text-align: center;
-    font: size 2.25rem;
-    font-weight: 600;
-}
-
 .features {
     margin-top: 4rem;
     display: grid;
