@@ -36,10 +36,12 @@
             <li><a href="#"><i class='bx bx-cog'></i></a></li>
             <h1>Settings</h1>
         </div>
-        <div class="box box-account">
-            <li><a href="#"><i class='bx bxs-user-account'></i></a></li>
-            <h1>Account</h1>
-        </div>
+        <form action="backend/phpFiles/account.php" method="post">
+            <div class="box box-account">
+                <li><a href="#"><i class='bx bxs-user-account'></i></a></li>
+                <h1>Account</h1>
+            </div>
+        </form>
         <div class="box box-logOut">
             <li><a href="index.html"><i class='bx bx-log-out'></i></a></li>
             <h1>Logout</h1>
@@ -52,6 +54,7 @@
 
     <!--JS-->
     <script src="dashboard.js"></script>
+
 </body>
 
 </html>

@@ -20,13 +20,23 @@ if ($connect->connect_errno != 0) {
     if ($result = @$connect->query($sql)) {
         $numbers_of_users = $result->num_rows;
         if ($numbers_of_users >= 1) {
+            $_SESSION['logged-on'] = true;
             $row_in_table = $result->fetch_assoc();
+            $_SESSION['id'] = $row_in_table['id'];
             $_SESSION['user'] = $row_in_table['username'];
+            $_SESSION['password'] = $row_in_table['password'];
+            $_SESSION['mail'] = $row_in_table['mail'];
 
+            unset($_SESSION['blad']);
             $result->close();
             header('Location: http://localhost/ApplicationForDevelopers/dashboard.html');
 
         } else {
+            $_SESSION['blad'] = '<span style="red">Wrong login or password!</span>';
+
+            if (isset($_SESSION['blad'])) {
+                echo $_SESSION['blad'];
+            }
 
         }
 

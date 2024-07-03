@@ -22,31 +22,30 @@
 
         <div class="container">
 
-            <div id="stars"></div>
 
 
 
             <h1>Register</h1>
+            <form action="backend/phpFiles/registration.php" method="post">
+                <div class="input-box">
+                    <input type="email" placeholder="Email" name="email" required>
+                    <i class='bx bx-envelope'></i>
+                </div>
 
-            <div class="input-box">
-                <input type="email" placeholder="Email" required>
-                <i class='bx bx-envelope'></i>
-            </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" name="login" required>
+                    <i class='bx bx-user'></i>
+                </div>
 
-            <div class="input-box">
-                <input type="text" placeholder="Username" required>
-                <i class='bx bx-user'></i>
-            </div>
-
-            <div class="input-box">
-                <input type="password" placeholder="Password" required>
-                <i class='bx bx-lock-alt'></i>
-            </div>
-
-
-            <button type="submit" class="btn">Login</button>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="password" required>
+                    <i class='bx bx-lock-alt'></i>
+                </div>
 
 
+                <button type="submit" class="btn" name="registration">Login</button>
+
+            </form>
 
             <div class="register-link">
                 <p>Do you have account?
