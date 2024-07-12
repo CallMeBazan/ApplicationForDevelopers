@@ -10,14 +10,26 @@
 </head>
 
 <body>
-    <!--
-    <div class="sidebar">
-        <div class="logo">
-            <i class='bx bxs-dashboard'></i>
-            <span>DASHBOARDS</span>
-        </div>
-        <i class='bx bx-menu'></i>
-</div>-->
+    <div class="top-bar">
+
+        <?php
+        session_start();
+
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: login.php");
+            exit();
+        }
+        
+        $user_id = $_SESSION['user_id'];
+        $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Użytkownik';
+        $_SESSION['plan'] = 'Free';
+        $plan = isset($_SESSION['plan']) ? $_SESSION['plan'] : 'free';
+
+        echo "<h1>Welcome  $username</h1>";
+        ?>
+
+    </div>
+
     <div class="container">
         <div class="box box-messages">
             <li><a href="chat.html"><i class='bx bx-message-dots'></i></a></li>
@@ -30,31 +42,25 @@
         </div>
         <div class="box box-wallet">
             <li><a href="#"><i class='bx bx-wallet'></i></a></li>
-            <h1>Plan</h1>
+            <h1>Your Plan: <?php echo $plan ?></h1>
         </div>
         <div class="box box-cog">
             <li><a href="#"><i class='bx bx-cog'></i></a></li>
             <h1>Settings</h1>
         </div>
-        <form action="backend/phpFiles/account.php" method="post">
-            <div class="box box-account">
-                <li><a href="#"><i class='bx bxs-user-account'></i></a></li>
-                <h1>Account</h1>
-            </div>
-        </form>
-        <div class="box box-logOut">
-            <li><a href="index.html"><i class='bx bx-log-out'></i></a></li>
-            <h1>Logout</h1>
+
+        <div class="box box-account">
+            <li><a href="#"><i class='bx bxs-user-account'></i></a></li>
+            <h1>Account</h1>
         </div>
 
-
-
+        <div class="box box-logOut">
+            <li><a href="backend/phpFiles/logout.php"><i class='bx bx-log-out'></i></a></li>
+            <h1>Logout</h1>
+        </div>
     </div>
-
 
     <!--JS-->
     <script src="dashboard.js"></script>
-
 </body>
-
 </html>
